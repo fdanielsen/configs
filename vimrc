@@ -3,6 +3,9 @@
 " Some of these settings are inspired by Tim Pope's vim-sensible,
 " after both understanding what it does and agreeing with the setting.
 " Source: https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
+"
+" Other inspirational sources:
+" http://benmccormick.org/2014/07/21/learning-vim-in-2014-getting-more-from-vim-with-plugins/
 
 " Turn off legacy support, engage IMproved
 set nocompatible
@@ -75,15 +78,36 @@ set sessionoptions-=options
 set incsearch
 set hlsearch
 
+" Enable improved regular expression handling, without the need to escape
+" special characters like $, *, period etc. to enable their special meaning.
+set magic
+
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
 	nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
 
+" 21st century terminal speed... Makes VIm assume a fast "terminal
+" connection", so it sends more characters to the screen at a time.
+set ttyfast
+
+" Show relative number of lines from current line infront of each line.
+set relativenumber
+
 " Put text deleted by ctrl-U in the undo list to avoid losing it completely.
 " More info: http://vim.wikia.com/wiki/Recover_from_accidental_Ctrl-U
 inoremap <C-U> <C-G>u<C-U>
 
+" Enable VIm hardcore mode. This will disable any usage of the arrow keys,
+" forcing the usage of hjkl on the home row instead.
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 " vim-pathogen setup
 "
