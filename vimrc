@@ -1,4 +1,8 @@
 " Carefully hand crafted, to-be-awesome, vimrc by fdanielsen
+"
+" Some of these settings are inspired by Tim Pope's vim-sensible,
+" after both understanding what it does and agreeing with the setting.
+" Source: https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
 
 " Turn off legacy support, engage IMproved
 set nocompatible
@@ -9,10 +13,6 @@ filetype plugin indent on
 
 " Turn on syntax highlighting
 syntax on
-
-" Enable the statusline at all times.
-" Default is 1, which means it'll only show with 2 or more splits.
-set laststatus=2
 
 " Configure indent defaults
 set tabstop=4
@@ -25,6 +25,65 @@ set noexpandtab
 autocmd Filetype python setlocal expandtab textwidth=79
 autocmd Filetype html* setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype javascript setlocal expandtab
+
+" Configure font family and size for GUI Vim (gvim, MacVim)
+if has('gui_running')
+	set guifont=InconsolataForPowerline-dz:h14
+endif
+
+" Enable the statusline at all times.
+" Default is 1, which means it'll only show with 2 or more splits.
+set laststatus=2
+
+" Enable automatic indenting of new lines
+set autoindent
+
+" Use shiftwidth when using <Tab> in front of a line
+set smarttab
+
+" Show (partial) command in the last line of the screen
+set showcmd
+
+" Show a menu of possible command completions
+set wildmenu
+
+" Make sure there's always one line visible above/below current line,
+" unless current line is the first or last line of course
+set scrolloff=1
+
+" Set utf-8 as current encoding if file has been detected as latin1
+if &encoding ==# 'latin1' && has('gui_running')
+	set encoding=utf-8
+endif
+
+" Automatically re-read in open files that have changed outside of Vim
+set autoread
+
+" Add Mac line endings to the list of detected end-of-line formats.
+" Unix is by default first, and will be chosen for new files.
+set fileformats+=mac
+
+" Increase history list of commands, search strings, etc.
+set history=1000
+
+" Disable storing of options and mappings set during a session.
+set sessionoptions-=options
+
+" Show matches to a search immediately while typing, instead of waiting
+" until <Enter> is hit.
+set incsearch
+
+" Highlight matches for current search.
+set hlsearch
+
+" Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+	nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+endif
+
+" Put text deleted by ctrl-U in the undo list to avoid losing it completely.
+" More info: http://vim.wikia.com/wiki/Recover_from_accidental_Ctrl-U
+inoremap <C-U> <C-G>u<C-U>
 
 
 " vim-pathogen setup
