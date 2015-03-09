@@ -19,6 +19,8 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set noexpandtab
+" Enable automatic indenting of new lines
+set autoindent
 
 " Configure indent setting overrides for specific file formats
 " autocmd Filetype * setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
@@ -35,9 +37,6 @@ endif
 " Default is 1, which means it'll only show with 2 or more splits.
 set laststatus=2
 
-" Enable automatic indenting of new lines
-set autoindent
-
 " Use shiftwidth when using <Tab> in front of a line
 set smarttab
 
@@ -48,8 +47,10 @@ set showcmd
 set wildmenu
 
 " Make sure there's always one line visible above/below current line,
-" unless current line is the first or last line of course
+" unless current line is the first or last line of course. Also make
+" sure there's always 5 characters before/after the cursor position.
 set scrolloff=1
+set sidescrolloff=5
 
 " Set utf-8 as current encoding if file has been detected as latin1
 if &encoding ==# 'latin1' && has('gui_running')
@@ -70,10 +71,8 @@ set history=1000
 set sessionoptions-=options
 
 " Show matches to a search immediately while typing, instead of waiting
-" until <Enter> is hit.
+" until <Enter> is hit, and highlight matches for current search.
 set incsearch
-
-" Highlight matches for current search.
 set hlsearch
 
 " Use <C-L> to clear the highlighting of :set hlsearch.
