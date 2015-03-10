@@ -5,7 +5,8 @@
 " Source: https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
 "
 " Other inspirational sources:
-" http://benmccormick.org/2014/07/21/learning-vim-in-2014-getting-more-from-vim-with-plugins/
+" - http://nvie.com/posts/how-i-boosted-my-vim/
+" - http://benmccormick.org/2014/07/21/learning-vim-in-2014-getting-more-from-vim-with-plugins/
 
 " Turn off legacy support, engage IMproved
 set nocompatible
@@ -24,6 +25,8 @@ set softtabstop=4
 set noexpandtab
 " Enable automatic indenting of new lines
 set autoindent
+" Disable soft wrap of lines
+set nowrap
 
 " Configure indent setting overrides for specific file formats
 " autocmd Filetype * setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
@@ -78,6 +81,10 @@ set sessionoptions-=options
 set incsearch
 set hlsearch
 
+" Make searches case insensitive if search string is lower case
+set ignorecase
+set smartcase
+
 " Enable improved regular expression handling, without the need to escape
 " special characters like $, *, period etc. to enable their special meaning.
 set magic
@@ -128,4 +135,7 @@ execute pathogen#infect()
 set background=dark
 colorscheme solarized
 
+" Force usage of jsxhint over jshint
 let g:syntastic_javascript_checkers = ['jsxhint']
+" Enable JSX syntax highlighting in normal .js files
+let g:jsx_ext_required = 0
