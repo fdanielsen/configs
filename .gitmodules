@@ -34,3 +34,12 @@
 [submodule "dotvim/bundle/vim-jsx"]
 	path = dotvim/bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "dotvim/bundle/vim-virtualenv"]
+	path = dotvim/bundle/vim-virtualenv
+	url = https://github.com/jmcantrell/vim-virtualenv.git
+[submodule "dotvim/bundle/scss-syntax"]
+	path = dotvim/bundle/scss-syntax
+	url = https://github.com/cakebaker/scss-syntax.vim
+[submodule "dotvim/bundle/python-syntax"]
+	path = dotvim/bundle/python-syntax
+	url = https://github.com/hdima/python-syntax.git
