@@ -11,6 +11,9 @@
 " Turn off legacy support, engage IMproved
 set nocompatible
 
+" Set a more comfortable leader key than default \
+let mapleader=","
+
 " Turn on file type detection, and load any plugin files and
 " indent definitions for detected file types
 filetype plugin indent on
