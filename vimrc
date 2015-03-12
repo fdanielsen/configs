@@ -35,8 +35,10 @@ autocmd Filetype html* setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype javascript setlocal expandtab
 
 " Configure font family and size for GUI Vim (gvim, MacVim)
+" NOTE: The powerline fonts are finicky about size to display symbols
+" nicely. This Inconsolata font works good at 12 or 16 at least.
 if has('gui_running')
-	set guifont=InconsolataForPowerline-dz:h14
+	set guifont=InconsolataForPowerline-dz:h16
 endif
 
 " Enable the statusline at all times.
@@ -139,3 +141,7 @@ colorscheme solarized
 let g:syntastic_javascript_checkers = ['jsxhint']
 " Enable JSX syntax highlighting in normal .js files
 let g:jsx_ext_required = 0
+
+" Let vim-airline know we're using a Powerline compatible font
+" with special symbols
+let g:airline_powerline_fonts = 1
