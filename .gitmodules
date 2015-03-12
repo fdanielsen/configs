@@ -43,3 +43,6 @@
 [submodule "dotvim/bundle/python-syntax"]
 	path = dotvim/bundle/python-syntax
 	url = https://github.com/hdima/python-syntax.git
+[submodule "dotvim/bundle/emmet-vim"]
+	path = dotvim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim
