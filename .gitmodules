@@ -46,3 +46,6 @@
 [submodule "dotvim/bundle/emmet-vim"]
 	path = dotvim/bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim
+[submodule "dotvim/bundle/supertab"]
+	path = dotvim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
