@@ -183,3 +183,10 @@ let g:jsx_ext_required = 0
 " Let vim-airline know we're using a Powerline compatible font
 " with special symbols
 let g:airline_powerline_fonts = 1
+
+"
+" Custom key mappings
+"
+
+" Map ,e to open netrw for current working directory
+map <Leader>e :e .<CR>
