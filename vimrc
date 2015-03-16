@@ -77,8 +77,10 @@ set sidescrolloff=5
 " and show # when a line extends past the window width.
 " TODO: Investigate if it's possible to color the background or text for
 " these characters to make the pop even more.
-set list
-set listchars=trail:•,extends:#,nbsp:•
+" TODO: Disable display of tab indents, which by default is shown as ^I.
+" Currently disabled this because seeing tabs is annoying...
+" set list
+" set listchars=trail:•,extends:#,nbsp:•
 
 " Set utf-8 as current encoding if file has been detected as latin1
 if &encoding ==# 'latin1' && has('gui_running')
@@ -184,6 +186,9 @@ let g:jsx_ext_required = 0
 " with special symbols
 let g:airline_powerline_fonts = 1
 
+" Turn of auto-pairs fast wrap shortcut, which by default gets mapped to "å"
+" for some reason. Default should me <M-e>, but vim interprets that as "å".
+let g:AutoPairsShortcutFastWrap = '<Nop>'
 
 "
 " Custom auto commands on events
