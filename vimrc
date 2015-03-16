@@ -184,9 +184,22 @@ let g:jsx_ext_required = 0
 " with special symbols
 let g:airline_powerline_fonts = 1
 
+
+"
+" Custom auto commands on events
+"
+
+" Automatically equalize space for each window on resize
+autocmd VimResized * :wincmd =
+
 "
 " Custom key mappings
 "
 
 " Map ,e to open netrw for current working directory
-map <Leader>e :e .<CR>
+nnoremap <Leader>e :e .<CR>
+
+" Ack on <Leader>a. The hanging space at the end is intentional
+" to set cursor at first argument position for Ack.
+nnoremap <Leader>a :Ack 
+nnoremap <Leader>A :AckFromSearch<CR>
