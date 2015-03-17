@@ -79,8 +79,8 @@ set sidescrolloff=5
 " these characters to make the pop even more.
 " TODO: Disable display of tab indents, which by default is shown as ^I.
 " Currently disabled this because seeing tabs is annoying...
-" set list
-" set listchars=trail:•,extends:#,nbsp:•
+set list
+set listchars=tab:▸\ ,trail:•,extends:#,nbsp:•
 
 " Set utf-8 as current encoding if file has been detected as latin1
 if &encoding ==# 'latin1' && has('gui_running')
