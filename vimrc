@@ -65,7 +65,11 @@ set showcmd
 set wildmenu
 
 " Ignore some common dot files in path expansions
-set wildignore=*.pyc,*.class
+set wildignore+=*.pyc,*.class
+" Ignore common vendor directories in path expansions
+set wildignore+=**/node_modules/**,**/bower_components/**,**/vendor/**
+" Ignore some commonly used Python virtualenv directories
+set wildignore+=**/venv/**,**/.venv/**
 
 " Make sure there's always one line visible above/below current line,
 " unless current line is the first or last line of course. Also make
