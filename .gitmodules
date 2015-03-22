@@ -49,3 +49,6 @@
 [submodule "dotvim/bundle/supertab"]
 	path = dotvim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "dotvim/bundle/vim-mustache-handlebars"]
+	path = dotvim/bundle/vim-mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars.git
