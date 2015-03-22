@@ -42,10 +42,10 @@ set autoindent
 set nowrap
 
 " Configure indent setting overrides for specific file formats
-" autocmd Filetype * setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
-autocmd Filetype python setlocal expandtab textwidth=79
-autocmd Filetype html* setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd Filetype javascript setlocal expandtab
+" tw = textwidth, ts = tabstop, sts = softtabstop, sw = shiftwidth, et = expandtab
+autocmd FileType python setlocal tw=79 et
+autocmd FileType html* setlocal ts=2 sts=2 sw=2 et
+autocmd FileType javascript setlocal et
 
 " Configure font family and size for GUI Vim (gvim, MacVim)
 " NOTE: The powerline fonts are finicky about size to display symbols
@@ -165,7 +165,7 @@ inoremap <right> <nop>
 
 " Set up list to easily disable plugins if necessary
 " Usage: `call add(g:pathogen_disabled, '<plugin-name>')`
-let g:pathogen_disabled = []
+let g:pathogen_disabled = ['vim-virtualenv']
 
 " Initialize plugins
 execute pathogen#infect()
