@@ -1,0 +1,4 @@
+DROPDB=`which dropdb`
+alias dropdb="echo -e \"\033[1;97;41mAre you really, REALLY sure?!\033[0m Then run $DROPDB\""
+
+source /usr/local/Cellar/arcanist/0.1/resources/shell/bash-completion
