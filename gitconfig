@@ -1,0 +1,17 @@
+[user]
+	name = Frode Danielsen
+	email = frode@e5r.no
+[core]
+	excludesfile = /Users/frode/.gitignore
+[alias]
+	s = status
+	m = merge --no-ff --no-commit
+	co = checkout
+	ci = commit
+	rb = rebase
+	sync = !git pull --rebase && git push
+	com = !git add . && git commit -am
+[push]
+	default = upstream
+[color]
+	ui = auto
