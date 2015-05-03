@@ -1,0 +1,10 @@
+--ignore-dir=bower_components
+--ignore-dir=node_modules
+--ignore-dir=static
+--ignore-dir=dist
+--ignore-dir=tmp
+--ignore-dir=.venv
+--ignore-dir=venv
+--type-add
+css=scss
+--type-add=html:ext:jinja
