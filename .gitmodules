@@ -52,3 +52,9 @@
 [submodule "dotvim/bundle/vim-mustache-handlebars"]
 	path = dotvim/bundle/vim-mustache-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars.git
+[submodule "dotvim/bundle/vim-elixir"]
+	path = dotvim/bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "dotvim/bundle/vim-elm"]
+	path = dotvim/bundle/vim-elm
+	url = https://github.com/lambdatoast/elm.vim.git
