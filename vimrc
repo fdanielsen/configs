@@ -41,11 +41,15 @@ set autoindent
 " Disable soft wrap of lines
 set nowrap
 
+" Enable backspace of white space
+set backspace=start,indent,eol
+
 " Configure indent setting overrides for specific file formats
 " tw = textwidth, ts = tabstop, sts = softtabstop, sw = shiftwidth, et = expandtab
 autocmd FileType python setlocal tw=79 et
 autocmd FileType html* setlocal ts=2 sts=2 sw=2 et
 autocmd FileType javascript setlocal et
+autocmd FileType scss setlocal ts=2 sts=2 sw=2 et
 
 " Configure font family and size for GUI Vim (gvim, MacVim)
 " NOTE: The powerline fonts are finicky about size to display symbols
