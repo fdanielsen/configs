@@ -58,3 +58,6 @@
 [submodule "dotvim/bundle/vim-elm"]
 	path = dotvim/bundle/vim-elm
 	url = https://github.com/lambdatoast/elm.vim.git
+[submodule "dotvim/bundle/vim-jinja2"]
+	path = dotvim/bundle/vim-jinja2
+	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
