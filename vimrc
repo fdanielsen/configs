@@ -189,9 +189,7 @@ set background=dark
 colorscheme solarized
 
 " Force usage of jsxhint over jshint
-let g:syntastic_javascript_checkers = ['jsxhint']
-" Enable JSX syntax highlighting in normal .js files
-let g:jsx_ext_required = 0
+let g:syntastic_javascript_checkers = ['eslint_d']
 
 " Let vim-airline know we're using a Powerline compatible font
 " with special symbols
