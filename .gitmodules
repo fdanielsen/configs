@@ -61,3 +61,12 @@
 [submodule "dotvim/bundle/vim-jinja2"]
 	path = dotvim/bundle/vim-jinja2
 	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
+[submodule "dotvim/bundle/vim-repeat"]
+	path = dotvim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "dotvim/bundle/vim-sexp-mappings"]
+	path = dotvim/bundle/vim-sexp-mappings
+	url = https://github.com/tpope/vim-sexp-mappings-for-regular-people.git
+[submodule "dotvim/bundle/vim-sexp"]
+	path = dotvim/bundle/vim-sexp
+	url = https://github.com/guns/vim-sexp.git
