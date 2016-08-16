@@ -73,3 +73,9 @@
 [submodule "dotvim/bundle/vim-fireplace"]
 	path = dotvim/bundle/vim-fireplace
 	url = https://github.com/tpope/vim-fireplace.git
+[submodule "dotvim/bundle/vim-unimpaired"]
+	path = dotvim/bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "dotvim/bundle/vim-editorconfig"]
+	path = dotvim/bundle/vim-editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
