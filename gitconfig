@@ -2,7 +2,10 @@
 	name = Frode Danielsen
 	email = frode@e5r.no
 [core]
+	editor = vim
 	excludesfile = /Users/frode/.gitignore
+[help]
+	autocorrect = 10
 [alias]
 	s = status
 	m = merge --no-ff --no-commit
@@ -15,3 +18,9 @@
 	default = upstream
 [color]
 	ui = auto
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
