@@ -52,13 +52,18 @@ autocmd FileType javascript setlocal et
 autocmd FileType scss setlocal ts=2 sts=2 sw=2 et
 
 " Force jinja file type for .jinja files
-au BufRead,BufNewFile *.jinja set ft=jinja
+au BufRead,BufNewFile *.jinja set ft=htmljinja
 
 " Configure font family and size for GUI Vim (gvim, MacVim)
 " NOTE: The powerline fonts are finicky about size to display symbols
 " nicely. This Inconsolata font works good at 12 or 16 at least.
 if has('gui_running')
 	set guifont=InconsolataForPowerline-dz:h16
+endif
+
+" Set utf-8 as current encoding if file has been detected as latin1
+if &encoding ==# 'latin1'
+	set encoding=utf-8
 endif
 
 " Enable the statusline at all times.
@@ -93,11 +98,6 @@ set sidescrolloff=5
 set list
 set listchars=tab:▸\ ,trail:•,extends:#,nbsp:•
 
-" Set utf-8 as current encoding if file has been detected as latin1
-if &encoding ==# 'latin1' && has('gui_running')
-	set encoding=utf-8
-endif
-
 " Make sure bash is shell inside vim, otherwise syntastic (and possibly
 " other plugins) won't work correctly
 if &shell =~# 'fish$'
@@ -112,7 +112,11 @@ set autoread
 set fileformats+=mac
 
 " Don't create .swp swap files, or backup before writing files
+" Note: With nowritebackup, if Vim can't write a file and crashes,
+" file is lost. Consider using a different `dir` other than `.` if
+" that turns out to be a problem.
 set nobackup
+set nowritebackup
 set noswapfile
 
 " Increase history list of commands, search strings, etc.
@@ -188,8 +192,13 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
+" Always populate location list for easy navigation between errors
+let g:syntastic_always_populate_loc_list = 1
+
 " Force usage of jsxhint over jshint
-let g:syntastic_javascript_checkers = ['eslint_d']
+let g:syntastic_scss_checkers = ['sass_lint']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 " Let vim-airline know we're using a Powerline compatible font
 " with special symbols
