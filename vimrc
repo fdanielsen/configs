@@ -196,7 +196,7 @@ colorscheme solarized
 let g:syntastic_always_populate_loc_list = 1
 
 " Force usage of jsxhint over jshint
-let g:syntastic_scss_checkers = ['sass_lint']
+let g:syntastic_scss_checkers = ['sass_lint', 'scss_lint']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
