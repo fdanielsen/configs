@@ -43,9 +43,6 @@
 [submodule "dotvim/bundle/python-syntax"]
 	path = dotvim/bundle/python-syntax
 	url = https://github.com/hdima/python-syntax.git
-[submodule "dotvim/bundle/emmet-vim"]
-	path = dotvim/bundle/emmet-vim
-	url = https://github.com/mattn/emmet-vim
 [submodule "dotvim/bundle/supertab"]
 	path = dotvim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
@@ -64,12 +61,6 @@
 [submodule "dotvim/bundle/vim-repeat"]
 	path = dotvim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "dotvim/bundle/vim-sexp-mappings"]
-	path = dotvim/bundle/vim-sexp-mappings
-	url = https://github.com/tpope/vim-sexp-mappings-for-regular-people.git
-[submodule "dotvim/bundle/vim-sexp"]
-	path = dotvim/bundle/vim-sexp
-	url = https://github.com/guns/vim-sexp.git
-[submodule "dotvim/bundle/vim-fireplace"]
-	path = dotvim/bundle/vim-fireplace
-	url = https://github.com/tpope/vim-fireplace.git
+[submodule "dotvim/bundle/vim-editorconfig"]
+	path = dotvim/bundle/vim-editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim
