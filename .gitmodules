@@ -61,6 +61,9 @@
 [submodule "dotvim/bundle/vim-repeat"]
 	path = dotvim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "dotvim/bundle/vim-unimpaired"]
+	path = dotvim/bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
 [submodule "dotvim/bundle/vim-editorconfig"]
 	path = dotvim/bundle/vim-editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim
