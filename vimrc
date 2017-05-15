@@ -12,6 +12,13 @@
 " other options since it might change their behavior.
 set nocompatible
 
+
+function! FindConfig(prefix, what, where)
+    let cfg = findfile(a:what, escape(a:where, ' ') . ';')
+    return cfg !=# '' ? ' ' . a:prefix . ' ' . shellescape(cfg) : ''
+endfunction
+
+
 " Set a more comfortable leader key than default \
 let mapleader=","
 
@@ -50,6 +57,10 @@ autocmd FileType python setlocal tw=79 et
 autocmd FileType html*,jinja setlocal ts=2 sts=2 sw=2 et
 autocmd FileType javascript setlocal et
 autocmd FileType scss setlocal ts=2 sts=2 sw=2 et
+
+autocmd FileType scss let b:syntastic_sass_sass_lint_args =
+    \ get(g:, 'syntastic_sass_sass_lint_args', '') .
+    \ FindConfig('-c', '.sass-lint.yml', expand('<afile:p:h>', 1))
 
 " Force jinja file type for .jinja files
 au BufRead,BufNewFile *.jinja set ft=htmljinja
@@ -196,7 +207,7 @@ colorscheme solarized
 let g:syntastic_always_populate_loc_list = 1
 
 " Force usage of jsxhint over jshint
-let g:syntastic_scss_checkers = ['sass_lint', 'scss_lint']
+let g:syntastic_scss_checkers = ['sass_lint']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
