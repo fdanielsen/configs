@@ -67,3 +67,6 @@
 [submodule "dotvim/bundle/vim-editorconfig"]
 	path = dotvim/bundle/vim-editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "dotvim/bundle/neoformat"]
+	path = dotvim/bundle/neoformat
+	url = https://github.com/sbdchd/neoformat

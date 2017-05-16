@@ -203,6 +203,8 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
+let g:neoformat_enabled_javascript = ['eslint_d']
+
 " Always populate location list for easy navigation between errors
 let g:syntastic_always_populate_loc_list = 1
 
@@ -222,6 +224,12 @@ let g:AutoPairsShortcutFastWrap = '<Nop>'
 "
 " Custom auto commands on events
 "
+
+" Run Neoformat on file save
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * Neoformat
+augroup END
 
 " Automatically equalize space for each window on resize
 autocmd VimResized * :wincmd =
