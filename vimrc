@@ -161,8 +161,10 @@ endif
 " connection", so it sends more characters to the screen at a time.
 set ttyfast
 
-" Show relative number of lines from current line infront of each line.
+" Show relative number of lines from current line infront of each line,
+" but show absolute line number for current line.
 set relativenumber
+set number
 
 " Put text deleted by ctrl-U in the undo list to avoid losing it completely.
 " More info: http://vim.wikia.com/wiki/Recover_from_accidental_Ctrl-U
@@ -203,7 +205,10 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
+let g:move_key_modifier = 'C'
+
 let g:neoformat_enabled_javascript = ['eslint_d']
+let g:neoformat_enabled_scss = ['prettier']
 
 " Always populate location list for easy navigation between errors
 let g:syntastic_always_populate_loc_list = 1
