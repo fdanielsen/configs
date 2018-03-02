@@ -69,7 +69,7 @@ au BufRead,BufNewFile *.jinja set ft=htmljinja
 " NOTE: The powerline fonts are finicky about size to display symbols
 " nicely. This Inconsolata font works good at 12 or 16 at least.
 if has('gui_running')
-	set guifont=InconsolataForPowerline-dz:h16
+	set guifont=Operator\ Mono\ Lig\ for\ Powerline:h16
 endif
 
 " Set utf-8 as current encoding if file has been detected as latin1
@@ -107,7 +107,7 @@ set sidescrolloff=5
 " TODO: Disable display of tab indents, which by default is shown as ^I.
 " Currently disabled this because seeing tabs is annoying...
 set list
-set listchars=tab:▸\ ,trail:•,extends:#,nbsp:•
+set listchars=tab:–\ ,trail:•,extends:#,nbsp:•
 
 " Make sure bash is shell inside vim, otherwise syntastic (and possibly
 " other plugins) won't work correctly
