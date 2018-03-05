@@ -1,0 +1,15 @@
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host adams
+  HostName adams.e5r.no
+
+Host asimov
+  HostName asimov.e5r.no
+  User eliksir
+
+Host heinlein
+  HostName heinlein.e5r.no
+  User eliksir

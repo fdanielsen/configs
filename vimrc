@@ -69,6 +69,7 @@ au BufRead,BufNewFile *.jinja set ft=htmljinja
 " NOTE: The powerline fonts are finicky about size to display symbols
 " nicely. This Inconsolata font works good at 12 or 16 at least.
 if has('gui_running')
+	set macligatures
 	set guifont=Operator\ Mono\ Lig\ for\ Powerline:h16
 endif
 
