@@ -73,3 +73,6 @@
 [submodule "dotvim/bundle/vim-move"]
 	path = dotvim/bundle/vim-move
 	url = https://github.com/matze/vim-move.git
+[submodule "dotvim/bundle/vim-gitgutter"]
+	path = dotvim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
