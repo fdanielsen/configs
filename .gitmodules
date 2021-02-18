@@ -79,3 +79,12 @@
 [submodule "dotvim/bundle/vim-flog"]
 	path = dotvim/bundle/vim-flog
 	url = https://github.com/rbong/vim-flog.git
+[submodule "dotvim/bundle/vim-js"]
+	path = dotvim/bundle/vim-js
+	url = https://github.com/yuezk/vim-js.git
+[submodule "dotvim/bundle/vim-jsx-pretty"]
+	path = dotvim/bundle/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
+[submodule "dotvim/dotvim/bundle/vim-js"]
+	path = dotvim/dotvim/bundle/vim-js
+	url = https://github.com/yuezk/vim-js.git

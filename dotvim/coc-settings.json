@@ -1,0 +1,8 @@
+{
+	"eslint.autoFixOnSave": true,
+	"python.formatting.provider": "black",
+	"python.setLinter": "flake8",
+	"python.linting.flake8Enabled": true,
+	"python.linting.flake8Path": "/Users/frode/.pyenv/versions/3.8.5/bin/flake8",
+	"python.linting.pylintEnabled": false
+}
