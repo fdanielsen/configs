@@ -2,6 +2,17 @@ Host *
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_rsa
+  ServerAliveInterval 120
+
+Host dick dick.e5r.no
+  HostName dick.e5r.no
+  Port 4444
+  IdentityFile ~/.ssh/id_ed25519
+
+Host clarke clarke.e5r.no
+  HostName clarke.e5r.no
+  Port 4444
+  IdentityFile ~/.ssh/id_ed25519
 
 Host adams
   HostName adams.e5r.no
@@ -10,6 +21,18 @@ Host asimov
   HostName asimov.e5r.no
   User eliksir
 
+Host asimov.e5r.no
+  User eliksir
+
 Host heinlein
   HostName heinlein.e5r.no
   User eliksir
+
+Host danielsen
+  HostName danielsen.dev
+  IdentityFile ~/.ssh/id_ed25519
+  User root
+
+Host veggbilder
+  HostName veggbilder.no
+  User veggbild

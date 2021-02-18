@@ -69,7 +69,7 @@ au BufRead,BufNewFile *.jinja set ft=htmljinja
 " NOTE: The powerline fonts are finicky about size to display symbols
 " nicely. This Inconsolata font works good at 12 or 16 at least.
 if has('gui_running')
-	set macligatures
+	" set macligatures
 	set guifont=Operator\ Mono\ Lig\ for\ Powerline:h16
 endif
 
@@ -133,7 +133,6 @@ set noswapfile
 
 " Increase history list of commands, search strings, etc.
 set history=1000
-
 " Set high number of undo levels
 set undolevels=1000
 
@@ -166,6 +165,8 @@ set ttyfast
 " but show absolute line number for current line.
 set relativenumber
 set number
+" Always show sign column, merged with line number, to avoid width shift
+set signcolumn=number
 
 " Put text deleted by ctrl-U in the undo list to avoid losing it completely.
 " More info: http://vim.wikia.com/wiki/Recover_from_accidental_Ctrl-U
@@ -190,7 +191,7 @@ inoremap <right> <nop>
 
 " Set up list to easily disable plugins if necessary
 " Usage: `call add(g:pathogen_disabled, '<plugin-name>')`
-let g:pathogen_disabled = ['vim-virtualenv']
+let g:pathogen_disabled = ['vim-virtualenv', 'neoformat', 'syntastic', 'supertab']
 
 " Initialize plugins
 execute pathogen#infect()
@@ -206,10 +207,10 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
-let g:move_key_modifier = 'C'
+" let g:move_key_modifier = 'C'
 
-let g:neoformat_enabled_javascript = ['eslint_d']
-let g:neoformat_enabled_scss = ['prettier']
+" let g:neoformat_enabled_javascript = ['eslint_d']
+" let g:neoformat_enabled_scss = ['prettier']
 
 " Always populate location list for easy navigation between errors
 let g:syntastic_always_populate_loc_list = 1
@@ -232,10 +233,10 @@ let g:AutoPairsShortcutFastWrap = '<Nop>'
 "
 
 " Run Neoformat on file save
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * Neoformat
-augroup END
+" augroup fmt
+"   autocmd!
+"   autocmd BufWritePre * Neoformat
+" augroup END
 
 " Automatically equalize space for each window on resize
 autocmd VimResized * :wincmd =
@@ -251,3 +252,13 @@ nnoremap <Leader>e :e .<CR>
 " to set cursor at first argument position for Ack.
 nnoremap <Leader>a :Ack 
 nnoremap <Leader>A :AckFromSearch<CR>
+
+" Use tab/shift-tab to navigate CoC completions
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Use CR to accept CoC completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Let CoC choose the first completion automatically on CR
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
